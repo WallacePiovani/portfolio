@@ -1,4 +1,4 @@
-    import Typing from "../components/typing"
+    import Typing from "../components/Typing"
     import { Points, PointMaterial } from "@react-three/drei";
     import { Canvas, useFrame } from "@react-three/fiber";
     import { Suspense } from "react";
