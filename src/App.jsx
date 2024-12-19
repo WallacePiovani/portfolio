@@ -1,4 +1,4 @@
-import Hero from "./sections/hero"
+import Hero from "./sections/Hero"
 import Navbar from "./sections/Navbar"
 
 const App = () => {
