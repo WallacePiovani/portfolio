@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { TypeAnimation } from "react-type-animation"
 const Typing = () => {
     return (

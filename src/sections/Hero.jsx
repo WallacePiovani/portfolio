@@ -1,11 +1,10 @@
-    import Typing from "../components/Typing"
-    import { Points, PointMaterial } from "@react-three/drei";
-    import { Canvas, useFrame } from "@react-three/fiber";
-    import { Suspense } from "react";
-    import CanvasLoader from "../components/CanvasLoader"
-    import { useRef, useState } from "react";
-    import * as random from "maath/random/dist/maath-random.esm";
-;
+import Typing from "../components/Typing";
+import { Points, PointMaterial, OrbitControls } from "@react-three/drei";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Suspense } from "react";
+import CanvasLoader from "../components/CanvasLoader";
+import { useRef, useState } from "react";
+import * as random from "maath/random/dist/maath-random.esm";
     const Hero = () => {
         return (
             <section className="min-h-screen w-full flex flex-col relative">
@@ -18,6 +17,13 @@
                         <Suspense fallback={<CanvasLoader />}>
                             <StarsBackground />
                         </Suspense>
+                        <OrbitControls 
+                            minDistance={1}
+                            maxDistance={5}
+                            enablePan={false}
+                            enableZoom={true}
+                            enableRotate={true}
+                        />
                     </Canvas>
                 </div>
             </section>
@@ -26,7 +32,7 @@
     function StarsBackground() {
         const ref = useRef();
         // Gerando posições aleatórias para as estrelas dentro de uma esfera
-        const [stars] = useState(() => random.inSphere(new Float32Array(5000), { radius: 4.2 }));
+        const [stars] = useState(() => random.inSphere(new Float32Array(6000), { radius: 4.2 }));
     
         useFrame((state, delta) => {
             ref.current.rotation.x -= delta / 10;
