@@ -18,4 +18,6 @@ body {
   @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
 }
 
+
+
 /* #010103 - alt color for background */

@@ -11,7 +11,7 @@
             <section className="min-h-screen w-full flex flex-col relative">
                 <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 sm:px-10 px-5 gap-1 z-10">
                     <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalSans">Olá, meu nome é Wallace </p>
-                    <Typing/>
+                    <Typing />
                 </div>
                 <div className="w-full h-full absolute inset-0 z-0">
                     <Canvas className="w-full h-full" camera={{ position: [0, 0, 5], fov: 75 }} >
