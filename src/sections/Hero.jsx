@@ -38,7 +38,7 @@ const Hero = () => {
                         />
                     </Canvas>
                 </div>
-                <div className="absolute bottom-0 w-full flex justify-center z-20">
+                <div className="absolute bottom-0 w-full flex justify-center mb-10 z-20">
                     <ScrollIndicator /> 
                 </div>
         </section>
@@ -46,7 +46,6 @@ const Hero = () => {
     }
     function StarsBackground() {
         const ref = useRef();
-        // Gerando posições aleatórias para as estrelas dentro de uma esfera
         const [stars] = useState(() => random.inSphere(new Float32Array(6000), { radius: 4.2 }));
     
         useFrame((state, delta) => {
