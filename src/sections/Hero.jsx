@@ -5,9 +5,10 @@ import { Suspense } from "react";
 import CanvasLoader from "../components/CanvasLoader";
 import { useRef, useState } from "react";
 import * as random from "maath/random/dist/maath-random.esm";
-import Button from "../components/Button";
+import { FaDownload } from "react-icons/fa6";
 import ButtonSocial from "../components/ButtonSocial";
 import ScrollIndicator from "../components/ScrollIndicator";
+
 
 const Hero = () => {
     return (
@@ -16,7 +17,10 @@ const Hero = () => {
                 <p className="sm:text-4xl text-2xl font-medium text-white text-center font-generalSans">Olá, meu nome é Wallace </p>
                 <Typing />
                 <div className="flex flex-col justify-center items-center gap-5 mt-5 sm:flex-row">
-                    <Button />
+                        <a className="text-white border-2 border-neutral-500 px-6 py-3 rounded-md hover:bg-neutral-500 transition-colors text-center flex items-center gap-2">
+                            Download CV
+                            <FaDownload />
+                        </a>
                     <div className="flex justify-center items-center gap-5">
                         <ButtonSocial icons="github" link="https://github.com/wallacepiovani" />
                         <ButtonSocial icons="instagram" link="https://www.instagram.com/" />
@@ -25,7 +29,7 @@ const Hero = () => {
                 </div>
             </div>
                 <div className="w-full h-full absolute inset-0 z-0">
-                    <Canvas className="w-full h-full" camera={{ position: [0, 0, 5], fov: 75 }} >
+                    <Canvas className="w-full h-full" camera={{ position: [0, 0, 10], fov: 75 }} >
                         <Suspense fallback={<CanvasLoader />}>
                             <StarsBackground />
                         </Suspense>
@@ -33,7 +37,7 @@ const Hero = () => {
                             minDistance={1}
                             maxDistance={5}
                             enablePan={false}
-                            enableZoom={true}
+                            enableZoom={false}
                             enableRotate={true}
                         />
                     </Canvas>
@@ -55,7 +59,7 @@ const Hero = () => {
     
         return (
             <group ref={ref}>
-                <Points positions={stars} stride={3} frustumCulled={false}>
+                <Points positions={stars} stride={4} frustumCulled={false}>
                     <PointMaterial
                         transparent
                         color="white"

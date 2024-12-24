@@ -9,7 +9,7 @@ const Typing = () => {
             <TypeAnimation
                 className="type text-gray_gradient text-center xl:text-7xl md:text-5xl sm:text-3xl text-4xl font-generalSans font-black"
                 sequence={[
-                    'Dev Full-stack',2000
+                    'Dev Full-Stack',2000
                 ]}
                 wrapper="span"
                 cursor={false}

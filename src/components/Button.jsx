@@ -1,12 +1,16 @@
-import { FaDownload } from "react-icons/fa6";
-
-const Button = () => {
+// eslint-disable-next-line react/prop-types
+const Button = ({ name, isBeam = false, containerClass }) => {
     return (
-        <a className="text-white border-2 border-neutral-500 px-6 py-3 rounded-md hover:bg-neutral-500 transition-colors text-center flex items-center gap-2">
-            Download CV
-            <FaDownload />
-        </a>
-    )
-}
-
-export default Button
+        <button className={`btn ${containerClass}`}>
+            {isBeam && (
+            <span className="relative flex h-3 w-3">
+                <span className="btn-ping"></span>
+                <span className="btn-ping_dot"></span>
+            </span>
+        )}
+        {name}
+        </button>
+    );
+    };
+    
+    export default Button;
