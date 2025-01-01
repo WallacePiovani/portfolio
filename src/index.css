@@ -8,7 +8,7 @@
 
 /* #010103 - #3f5042- alt color for background */
 body {
-  background: #040a06;
+  background: #010103;
   font-family: 'General Sans', sans-serif;
 }
 
@@ -39,8 +39,19 @@ body {
 .btn-ping_dot {
   @apply relative inline-flex rounded-full h-3 w-3 bg-green-500;
 }
+.arrow-btn {
+  @apply w-10 h-10 p-3 cursor-pointer active:scale-95 transition-all rounded-full arrow-gradient;
+}
 
-
+.arrow-gradient {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1) 10%,
+    rgba(255, 255, 255, 0.000025) 50%,
+    rgba(255, 255, 255, 0.000025) 50%,
+    rgba(255, 255, 255, 0.025) 100%
+  );
+}
 
 @keyframes scroll {
   0% {
