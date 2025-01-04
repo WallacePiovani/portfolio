@@ -15,7 +15,7 @@ const Typing = () => {
                 cursor={false}
                 repeat={Infinity}
             />
-            <style global jsx>{`
+            <style >{`
                 .type::after {
                     content: '|';
                     animation: cursor 1.1s infinite step-start;

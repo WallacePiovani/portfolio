@@ -18,8 +18,8 @@
 
         useGSAP(()=>{
             gsap.from(group.current.rotation,{
-                y: Math.PI / 2,
-                duration: 1,
+                y: 2,
+                duration: 2,
                 ease: 'power3.out',
             })
         
