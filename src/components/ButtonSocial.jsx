@@ -1,4 +1,4 @@
-import { FaGithub, FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaXTwitter, FaLinkedin } from "react-icons/fa6";
 
 // eslint-disable-next-line react/prop-types
 const ButtonSocial = ({icons, link}) => {
@@ -7,10 +7,10 @@ const ButtonSocial = ({icons, link}) => {
         switch (icons) {
             case 'github':
                 return <FaGithub size={20} />
-            case 'instagram':
-                return <FaInstagram size={20}/>
             case 'x':
                 return <FaXTwitter size={20}/>
+            case 'linkedin':
+                return <FaLinkedin size={20}/>
             default:
                 return null   
         }

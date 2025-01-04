@@ -23,8 +23,8 @@ const Hero = () => {
                         </a>
                     <div className="flex justify-center items-center gap-5">
                         <ButtonSocial icons="github" link="https://github.com/wallacepiovani" />
-                        <ButtonSocial icons="instagram" link="https://www.instagram.com/" />
-                        <ButtonSocial icons="x" link="https://twitter.com/" />
+                        <ButtonSocial icons="linkedin" link="https://linkedin.com/in/wallacepiovani/" />
+                        <ButtonSocial icons="x" link="https://x.com/wallacepiovani" />
                     </div>
                 </div>
             </div>
